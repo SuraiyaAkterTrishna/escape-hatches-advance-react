@@ -1,4 +1,5 @@
-import Counter from "./Counter"
+
+import StopWatch from "./StopWatch"
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
   return (
     <>
       <h1>Hello React...</h1>
-      <Counter />
+      <StopWatch />
     </>
   )
 }
