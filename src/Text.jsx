@@ -4,7 +4,7 @@ export default function Text(){
     let myRef = useRef(null);
 
     function handleClick(){
-        console.log(myRef.current)
+        myRef.current.textContent = "Hello Clicked"
     }
 
     return (
