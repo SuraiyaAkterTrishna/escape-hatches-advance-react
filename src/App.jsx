@@ -1,10 +1,12 @@
-import Text from "./Text"
+import CatFriends from "./CatFriends"
+import Focus from "./Focus"
 
 function App() {
 
   return (
     <>
-      <Text></Text>
+      <Focus />
+      <CatFriends />
     </>
   )
 }
