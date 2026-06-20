@@ -1,13 +1,10 @@
-
-import StopWatch from "./StopWatch"
-
+import Text from "./Text"
 
 function App() {
 
   return (
     <>
-      <h1>Hello React...</h1>
-      <StopWatch />
+      <Text></Text>
     </>
   )
 }
