@@ -1,12 +1,11 @@
-import CatFriends from "./CatFriends"
-import Focus from "./Focus"
+import Comments from "../components/Comments"
+
 
 function App() {
 
   return (
     <>
-      <Focus />
-      <CatFriends />
+     <Comments postId={2} />
     </>
   )
 }
