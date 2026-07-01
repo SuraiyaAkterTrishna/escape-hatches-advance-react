@@ -1,17 +1,11 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# escape-hatches-advance-react
+# Synchronizing with Effects
+- Unlike events, Effects are caused by rendering itself rather than a particular interaction.
+- Unlike events, Effects are caused by rendering itself rather than a particular interaction.
+- Effects let you synchronize a component with some external system (third-party API, network, etc).
+- By default, Effects run after every render (including the initial one).
+- React will skip the Effect if all of its dependencies have the same values as during the last render.
+- You can’t “choose” your dependencies. They are determined by the code inside the Effect.
+- Empty dependency array ([]) corresponds to the component “mounting”, i.e. being added to the screen.
+- In Strict Mode, React mounts components twice (in development only!) to stress-test your Effects.
+- If your Effect breaks because of remounting, you need to implement a cleanup function.
+- React will call your cleanup function before the Effect runs next time, and during the unmount.
